@@ -1,0 +1,134 @@
+html{
+    min-height: 100%;
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-image: linear-gradient(to top, #1e3c72 0%, #1e3c72 1%, #2a5298 100%);
+    font-family: 'Roboto', sans-serif;
+    min-height: 100%;
+}
+
+h1{
+    font-weight: 400;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+.contenido {
+    background-color: white;
+    max-width: 1100px;
+    margin:  0 auto;
+    height: 100%;
+    padding: 20px;
+}
+
+@media (min-width:768px) {
+    .contenedor {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .contenedor > div {
+        flex: 1 0 50%;
+    }
+}
+
+.input {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+.input label {
+    flex: 0 0 120px;
+    text-align: right;
+    margin-right: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.input span {
+    color: red;
+}
+.input input[type="text"] {
+    height: 2.5rem;
+    padding: 1rem;
+    display: flex;
+    flex: 1;
+}
+.enviar {
+    text-align: right;
+    justify-content: flex-end!important;
+}
+.input input[type="submit"]{
+    background-color: #6f86d6;
+    padding: .5rem 2rem;
+    color: white;
+    align-self: flex-end;
+    border:none;
+    transition: background-color .3s ease-in-out;
+} 
+.input input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #384e9d;
+}
+
+.error {
+    padding: 1rem;
+    border: 1px solid red;
+    background-color: rgb(249, 121, 121);
+    color: white;
+    text-align: center;
+}
+
+
+#resultado {
+    white-space: pre-wrap;
+    padding: 2rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+  
+    position: relative;
+    margin: 100px auto;
+  }
+  
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #008000;
+    opacity: 0.6;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+    animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+  
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+  
+  @-webkit-keyframes sk-bounce {
+    0%, 100% { -webkit-transform: scale(0.0) }
+    50% { -webkit-transform: scale(1.0) }
+  }
+  
+  @keyframes sk-bounce {
+    0%, 100% { 
+      transform: scale(0.0);
+      -webkit-transform: scale(0.0);
+    } 50% { 
+      transform: scale(1.0);
+      -webkit-transform: scale(1.0);
+    }
+  }
