@@ -31,7 +31,15 @@ export class API{
     }
 }
 
+function limpiarHTML(){
+    while(UI.divResultado.firstChild){
+        UI.divResultado.removeChild(UI.divResultado.firstChild);
+    }
+}
+
 function Spinner(){
+    limpiarHTML();
+
     const divSpinner = document.createElement('div');
     divSpinner.classList.add('spinner');
 
